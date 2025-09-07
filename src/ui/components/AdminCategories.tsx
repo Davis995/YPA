@@ -11,7 +11,7 @@ interface CategoryFormData {
   description: string;
   image: FileList;
 }
-
+const baseUrl = import.meta.env.VITE_API_URL
 const AdminCategories: React.FC = () => {
   const [editingCategory, setEditingCategory] = useState<Category | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -183,7 +183,7 @@ const AdminCategories: React.FC = () => {
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">Current image:</p>
                     <img 
-                      src={`http://localhost:8000${editingCategory.image}`} 
+                      src={`${baseUrl}${editingCategory.image}`} 
                       alt="Current" 
                       className="mt-1 h-20 w-20 object-cover rounded"
                     />
