@@ -183,7 +183,7 @@ const AdminCategories: React.FC = () => {
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">Current image:</p>
                    <img
-  src={editingCategory.image ? `${baseUrl.replace(/\/$/, '')}/${editingCategory.image}` : 'https://via.placeholder.com/80x80?text=No+Image'}
+  src={editingCategory.image ? `${baseUrl}${editingCategory.image}` : 'https://via.placeholder.com/80x80?text=No+Image'}
   alt="Current"
   className="mt-1 h-20 w-20 object-cover rounded"
   onError={(e) => {
@@ -223,7 +223,7 @@ const AdminCategories: React.FC = () => {
           <div key={category.id} className="bg-white overflow-hidden shadow rounded-lg">
                          <div className="aspect-w-16 aspect-h-9">
          <img
-  src={category.image ? `${baseUrl.replace(/\/$/, '')}/${category.image}` : 'https://via.placeholder.com/400x300?text=No+Image'}
+  src={category.image ? `${baseUrl}${category.image}` : 'https://via.placeholder.com/400x300?text=No+Image'}
   alt={category.name}
   className="w-full h-48 object-cover"
   onError={(e) => {
