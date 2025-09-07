@@ -13,7 +13,7 @@ interface MenuFormData {
   image: FileList;
   category: MenuCategory;
 }
-
+const baseUrl = import.meta.env.VITE_API_URL
 const AdminMenu: React.FC = () => {
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -227,7 +227,7 @@ console.log(formData)
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">Current image:</p>
                     <img 
-                      src={`http://localhost:8000${editingItem.image}`} 
+                      src={`${baseUrl}${editingItem.image}`} 
                       alt="Current" 
                       className="mt-1 h-20 w-20 object-cover rounded"
                     />
