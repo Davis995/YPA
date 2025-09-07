@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Hide scrollbars in webkit */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background: theme('colors.slate.700');
+	border-radius: 9999px;
+}
+
+.container-px {
+	@apply px-4 sm:px-6 lg:px-8;
+}
+
+
