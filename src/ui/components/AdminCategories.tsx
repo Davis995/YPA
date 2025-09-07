@@ -182,11 +182,15 @@ const AdminCategories: React.FC = () => {
                 {editingCategory && editingCategory.image && (
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">Current image:</p>
-                    <img 
-                       src={`${baseUrl.replace(/\/$/, '')}/${editingItem.image}`}
-                      alt="Current" 
-                      className="mt-1 h-20 w-20 object-cover rounded"
-                    />
+                   <img
+  src={editingCategory.image ? `${baseUrl.replace(/\/$/, '')}/${editingCategory.image}` : 'https://via.placeholder.com/80x80?text=No+Image'}
+  alt="Current"
+  className="mt-1 h-20 w-20 object-cover rounded"
+  onError={(e) => {
+    e.currentTarget.src = 'https://via.placeholder.com/80x80?text=No+Image';
+  }}
+/>
+
                   </div>
                 )}
               </div>
@@ -218,14 +222,15 @@ const AdminCategories: React.FC = () => {
         {categories.map((category:any) => (
           <div key={category.id} className="bg-white overflow-hidden shadow rounded-lg">
                          <div className="aspect-w-16 aspect-h-9">
-               <img
-                 src={category.image ? `http://localhost:8000${category.image}` : 'https://via.placeholder.com/400x300?text=No+Image'}
-                 alt={category.name}
-                 className="w-full h-48 object-cover"
-                 onError={(e) => {
-                   e.currentTarget.src = 'https://via.placeholder.com/400x300?text=No+Image';
-                 }}
-               />
+         <img
+  src={category.image ? `${baseUrl.replace(/\/$/, '')}/${category.image}` : 'https://via.placeholder.com/400x300?text=No+Image'}
+  alt={category.name}
+  className="w-full h-48 object-cover"
+  onError={(e) => {
+    e.currentTarget.src = 'https://via.placeholder.com/400x300?text=No+Image';
+  }}
+/>
+
              </div>
             <div className="p-4">
               <h3 className="text-lg font-medium text-gray-900">{category.name}</h3>
