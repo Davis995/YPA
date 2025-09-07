@@ -183,7 +183,7 @@ const AdminCategories: React.FC = () => {
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">Current image:</p>
                     <img 
-                      src={`${baseUrl}${editingCategory.image}`} 
+                       src={`${baseUrl.replace(/\/$/, '')}/${editingItem.image}`}
                       alt="Current" 
                       className="mt-1 h-20 w-20 object-cover rounded"
                     />
