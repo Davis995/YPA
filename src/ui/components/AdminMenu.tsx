@@ -227,7 +227,7 @@ console.log(formData)
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">Current image:</p>
                     <img 
-                      src={`${baseUrl}${editingItem.image}`} 
+                      src={`${baseUrl}/${editingItem.image}`} 
                       alt="Current" 
                       className="mt-1 h-20 w-20 object-cover rounded"
                     />
@@ -263,7 +263,7 @@ console.log(formData)
           <div key={item.id} className="bg-white overflow-hidden shadow rounded-lg">
             <div className="aspect-w-16 aspect-h-9">
               <img
-                src={item.image ? `${baseUrl}${item.image}` : 'https://via.placeholder.com/400x300?text=No+Image'}
+                src={item.image ? `${baseUrl}/${item.image}` : 'https://via.placeholder.com/400x300?text=No+Image'}
                 alt={item.name}
                 className="w-full h-48 object-cover"
                 onError={(e) => {
