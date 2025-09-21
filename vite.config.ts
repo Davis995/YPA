@@ -14,19 +14,19 @@ export default defineConfig({
 		allowedHosts: ['ea49ede4f60b.ngrok-free.app'], // allow your ngrok URL
 		proxy: {
 			'/api': {
-				target: 'http://localhost:8000',
+				target: 'https://ypa-backend.onrender.com',
 				changeOrigin: true,
 				secure: false,
 			},
 			'/media': {
-				target: 'http://localhost:8000',
+				target: 'https://ypa-backend.onrender.com',
 				changeOrigin: true,
 				secure: false,
 			}
 		}
 	},
 	define: {
-		'import.meta.env.VITE_API_URL': JSON.stringify('http://localhost:8000')
+		'import.meta.env.VITE_API_URL': JSON.stringify('https://ypa-backend.onrender.com')
 	}
 });
 
