@@ -30,7 +30,7 @@ export const Header = () => {
     >
       <div className="container-px mx-auto flex max-w-7xl items-center justify-between py-3">
         <a href="#hero" className="font-serif text-2xl">
-          <span className="text-brand">YPA</span>Mubuzichoma
+          <span className="text-brand">MY</span>RESTUARANT
         </a>
 
         {/* Desktop Menu */}
