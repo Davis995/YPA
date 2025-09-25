@@ -757,7 +757,7 @@ const RestaurantMenu: React.FC = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <h1 className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent truncate">
-                 YPAMubuzichoma
+                 MY RESTURANT
                 </h1>
                 <div className="flex items-center gap-2 sm:gap-4 mt-1 sm:mt-2">
                   <div className="flex items-center gap-1 sm:gap-2">
